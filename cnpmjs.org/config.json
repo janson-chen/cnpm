@@ -1,0 +1,47 @@
+{
+  "logdir": "/var/data/cnpm_data/logs",
+  "database": {
+    "db": "cnpmjs_test",
+    "dialect": "mysql",
+    "host": "mysql-db",
+    "port": 3306,
+    "username": "root",
+    "password": "",
+    "pool": {
+      "maxConnections": 10,
+      "minConnections": 0,
+      "maxIdleTime": 30000
+    },
+    "logging": false,
+    "syncFirst": false
+  },
+  "enablePrivate": true,
+  "syncModel": "none",
+  "registryPort": 7001,
+  "webPort": 7002,
+  "bindingHost": "0.0.0.0",
+  "admins": {
+    "admin": "hao.chen@zeiss.com"
+  },
+  "scopes": [
+    "@zeiss"
+  ],
+  "mail": {
+    "enable": true,
+    "appname": "cnpmjs.org",
+    "from": "cnpmjs.org mail sender <adderss@outlook.com>",
+    "service": "outlook",
+    "auth": {
+      "user": "hao.chen@zeiss.com",
+      "pass": "admin123"
+    }
+  },
+  "enableCluster": false,
+  "alwaysAuth": false,
+  "logoURL": "/logo.png",
+  "officialNpmRegistry": "https://registry.npmjs.com",
+  "officialNpmReplicate": "https://replicate.npmjs.com",
+  "sourceNpmRegistry": "https://registry.npm.taobao.org",
+  "sourceNpmWeb": "https://npm.taobao.org",
+  "sourceNpmRegistryIsCNpm": true
+}
