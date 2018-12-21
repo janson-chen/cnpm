@@ -1,0 +1,13 @@
+@import "../../../../../styles/zeiss-design/variables";
+
+:host {
+    display: inline-block;
+
+    svg {
+        display: inline-block;
+        all: inherit;
+        fill: var(--font-color);
+        width: 16px;
+        height: 16px;
+    }
+}

@@ -1,0 +1,47 @@
+<% if (type) { %>
+<!--
+    options is an array like:
+    [
+        {
+            icon: 'icon-office'
+            label: 'ng-option name',
+            value: 'ng-option value',
+            disabled: false
+        },
+        ...
+    ]
+-->
+<% } %>
+<% if (type === 'only-icon') { %>
+<ng-select [searchable]="false" class="cz-ng-select only-icon" [clearable]="false" [items]="options" [(ngModel)]="selectedOption">
+    <ng-template ng-label-tmp let-item="item">
+        <div class="icon-wrap">
+            <cz-svg-icon [icon]="item?.icon" class="icon"></cz-svg-icon>
+        </div>
+    </ng-template>
+    <ng-template ng-option-tmp let-item="item" let-item$="options$" let-index="index">
+        <div class="icon-wrap">
+            <cz-svg-icon [icon]="item?.icon" class="icon"></cz-svg-icon>
+        </div>
+    </ng-template>
+</ng-select>
+<% } else if (type === 'only-text') { %>
+<ng-select  class="cz-ng-select" [searchable]="false" [clearable]="false" [(ngModel)]="selectedOption.value">
+    <ng-option *ngFor="let item of options" [value]="item.value">{{ item.label }}</ng-option>
+</ng-select>
+<% } else if (type === 'text+icon') { %>
+<ng-select [searchable]="false" class="cz-ng-select" [clearable]="false" [items]="options" [(ngModel)]="selectedOption">
+    <ng-template ng-label-tmp let-item="item">
+        <div class="icon-wrap">
+            <cz-svg-icon [icon]="item?.icon" class="icon"></cz-svg-icon>
+        </div>
+        <span>{{ item?.value }}</span>
+    </ng-template>
+    <ng-template ng-option-tmp let-item="item" let-item$="options$" let-index="index">
+        <div class="icon-wrap">
+            <cz-svg-icon [icon]="item?.icon" class="icon"></cz-svg-icon>
+        </div>
+        <span>{{ item?.value }}</span>
+    </ng-template>
+</ng-select>
+<% } %>

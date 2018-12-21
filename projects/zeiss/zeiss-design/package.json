@@ -1,0 +1,13 @@
+{
+    "name": "@zeiss/zeiss-design",
+    "version": "0.0.0",
+    "author": "admin",
+    "scripts": {
+        "postinstall": "yarn build",
+        "build": "ng build @zeiss/zeiss-design"
+    },
+    "peerDependencies": {
+        "@angular/common": "^7.1.0",
+        "@angular/core": "^7.1.0"
+    }
+}

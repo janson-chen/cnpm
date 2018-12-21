@@ -1,0 +1,3 @@
+<% if (name === 'svg-icon') { %>
+    <% @import('./svg-icon/svg-icon.scss') %>
+<% } %>
